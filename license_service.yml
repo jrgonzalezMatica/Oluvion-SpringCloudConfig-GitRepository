@@ -1,0 +1,28 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: license_service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-server
+
+  security:
+    oauth2:
+      client:
+        registration:
+          azure:
+            client-id: 836be912-6b14-48ec-9311-318150a96a74
+            client-secret: ?vyGLL8I*TLM6bvpt3-Tlq3R=205EQ-4
+server:
+  port: 8083
+
+azure:
+  activedirectory:
+    tenant-id: c4630979-2626-453e-8851-3d75ab706c42
+    active-directory-groups: Users
